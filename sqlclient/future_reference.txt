@@ -1,0 +1,47 @@
+/*        try{
+
+
+
+            *//**********************************
+             * TABLE COLUMN ADDED DYNAMICALLY *
+             **********************************//*
+            for(int i = 0 ; i < personsTable.getColumns().length; i++){
+                //We are using non property style for making dynamic table
+                final int j = i;
+                TableColumn col = new TableColumn(personsTable.getColumn(i).getName());
+                col.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){
+                    public ObservableValue<String> call(TableColumn.CellDataFeatures<ObservableList, String> param) {
+                        return new SimpleStringProperty(param.getValue().get(j).toString());
+                    }
+                });
+
+                tableView.getColumns().addAll(col);
+                System.out.println("Column ["+i+"] ");
+            }
+
+            *//********************************
+             * Data added to ObservableList *
+             ********************************//*
+            for(Row r: dataSet.toRows()){
+                //Iterate Row
+                ObservableList<String> row = FXCollections.observableArrayList();
+                for(int i=0 ; i<personsTable.getColumns().length; i++){
+                    //Iterate Column
+                    row.add(String.valueOf(r.getValue(i)));
+                }
+                System.out.println("Row [1] added "+row );
+                data.add(row);
+
+            }
+
+            //FINALLY ADDED TO TableView
+            tableView.setItems(data);
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Error on Building Data");
+        }*/
+
+
+
+        //tableView.refresh();
+

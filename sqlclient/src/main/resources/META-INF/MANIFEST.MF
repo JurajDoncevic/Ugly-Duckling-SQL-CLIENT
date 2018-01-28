@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: com/juraj/sqlclient/Main
+Main-Class: com.juraj.sqlclient.Main
+

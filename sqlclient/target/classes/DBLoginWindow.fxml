@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
+         <image>
+            <Image url="@appLogo.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="272.0" layoutY="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="112.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="488.0" minWidth="10.0" percentWidth="75.0" prefWidth="488.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Server URL and port:" />
+            <Label text="Database name:" GridPane.rowIndex="1" />
+            <Label text="Username:" GridPane.rowIndex="2" />
+            <Label text="Password:" GridPane.rowIndex="3" />
+             <TextField fx:id="tbx_serverURL" GridPane.columnIndex="1">
+                 <GridPane.margin>
+                     <Insets left="20.0" right="20.0" />
+                 </GridPane.margin>
+             </TextField>
+             <TextField fx:id="tbx_dbName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets left="20.0" right="20.0" />
+                 </GridPane.margin>
+             </TextField>
+             <TextField fx:id="tbx_username" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                 <GridPane.margin>
+                     <Insets left="20.0" right="250.0" />
+                 </GridPane.margin>
+             </TextField>
+            <PasswordField fx:id="psf_password" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="250.0" />
+               </GridPane.margin>
+            </PasswordField>
+            <Button fx:id="btn_connect" defaultButton="true" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#click_btn_connect" text="Connect!" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button fx:id="btn_cancel" cancelButton="true" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#click_btn_cancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="lbl_message" text="THIS IS A CONNECTION ERROR" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="30.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
