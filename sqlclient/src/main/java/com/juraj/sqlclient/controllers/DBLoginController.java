@@ -45,11 +45,6 @@ public class DBLoginController {
     @FXML
     private void initialize(){
 
-        tbx_serverURL.setText("localhost:5432");
-        tbx_dbName.setText("dvdrental");
-        tbx_username.setText("postgres");
-        psf_password.setText("admin");
-
     }
 
     @FXML
